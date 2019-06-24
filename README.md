@@ -1,20 +1,10 @@
-# React Props Movie Lab
-
-## Objectives
-
-1.  Practice passing props from parent components to children
-2.  Practice using default props
-3.  Practice jumping into and improving existing code
-
-## Introduction
 
 This is a barebones React application used to showcase the nine greatest movies
 of all time. Your job is to update it so that it passes props from parent to
 children components correctly. In addition, you will implement default props so
 that 'bad/missing data' is properly handled - preventing our user interface from
 blowing up our visitors' computers
-
-Following is the component tree. When fully rendered, there are **9**
+ **9**
 `MovieCards` rendered by `MovieShowcase`:
 
 ```
@@ -43,37 +33,9 @@ In our movie data set, we occasionally have missing data. This is where
 handling all of our `defaultProp`'ing in `MovieCard` before they are passed down
 the chain to the front and back components.
 
-## Deliverables
-
-###### `MovieShowcase`
-
-1.  `.map` over the imported movie data array and render `MovieCard`s for each element. (see [documentation)][lists-and-keys]
-2.  Don't forget to pass _all 4_ props
-
-###### `MovieCard`
-
-1.  `defaultProps` should be assigned in `MovieCard` for all four of the props:
-
-- `title` receives an 'Unknown' string
-- `IMDBRating` simply gets assigned to null
-- `genres` should receive a value that will work with our `CardBack` component's rendering method for genres. The screen should read: 'No Genre(s) Found'
-- `poster` should get the string `default`
-
-2.  pass the correct props to the correct back/front components
-    (**Note:** the `posterMap` already takes care of converting a string into the appropriate poster asset)
-
-###### `CardFront`
-
-1.  the prop should be used to apply a background image. This can be done inline via:
-
-```js
-style={{backgroundImage: `url(${prop})`}}
-```
 
 ###### `CardBack`
 
-1.  render the genres (as comma separated) strings
-2.  render the title value
 3.  Finish writing the method `generateRatingElement`, which should do the following:
 
 - if the IMDBRating prop is null, return an `<h4>` with the contents 'No Rating Found'
