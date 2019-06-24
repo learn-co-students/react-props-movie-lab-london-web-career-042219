@@ -14,7 +14,7 @@ const movieData = [
   {
     title: 'ChromeBoi',
     IMDBRating: 5,
-    genres: ['thriller', 'romance'],
+    genres: [],
     poster: 'chromeboi'
   },
   
